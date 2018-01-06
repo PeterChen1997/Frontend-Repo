@@ -1,2 +1,2 @@
-# -Offer
+# FightForOffer
 JavaScript 实现
