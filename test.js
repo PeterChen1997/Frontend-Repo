@@ -1,13 +1,11 @@
-function click() {
-    let item = document.querySelector('.layui-layer-shade') || 'null'
-    if(item == 'null') {
-        console.log('null')
-        return;
-    } else {
-        console.log('click')
-        item.click()
-        return;
-    }
+function fn(source, result) {
+    if (source.length == 0)
+        res.push(result.join(''));
+    else
+        for (var i = 0; i < source.length; i++)
+            fn(source.slice(0, i).concat(source.slice(i + 1)), result.concat(source[i]));
 }
+let res = []
+fn('a',[])
 
-setInterval(click, 5000)
+console.log(res)
