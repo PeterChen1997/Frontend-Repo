@@ -1,3 +1,1 @@
-let arr = 2
-
-console.log(arr >> 1)
+console.log(Math.floor(0.5))
