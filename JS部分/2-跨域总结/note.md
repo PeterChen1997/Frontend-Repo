@@ -14,9 +14,9 @@
 
 为了防止 CSRF(Cross-site request forgery), 中文名为跨站请求伪造，简单来说就是身份盗用
 
-1. 用户登录了自己的银行页面 http://mybank.com，http://mybank.com向用户的cookie中添加用户标识。
-1. 用户浏览了恶意页面 http://evil.com。执行了页面中的恶意AJAX请求代码。
-1. http://evil.com向http://mybank.com发起AJAX HTTP请求，请求会默认把http://mybank.com对应cookie也同时发送过去。
+1. 用户登录了自己的银行页面 http://mybank.com， http://mybank.com 向用户的cookie中添加用户标识。
+1. 用户浏览了恶意页面 http://evil.com 执行了页面中的恶意AJAX请求代码。
+1. http://evil.com 向 http://mybank.com 发起AJAX HTTP请求，请求会默认把http://mybank.com 对应cookie也同时发送过去。
 1. 银行页面从发送的cookie中提取用户标识，验证用户无误，response中返回请求数据。此时数据就泄露了。
 1. 而且由于Ajax在后台执行，用户无法感知这一过程。
 
@@ -69,4 +69,73 @@ function handleRes(data) {
 document.domain = 'peterchen.club'
 ```
 
+```html
+<!-- https://a.peterchen.club/index.html -->
+<body>
+  <iframe src="https://bpeterchen.club" onload="iframeLoaded()">
+  <script>
+    console.log(document.querySelector('iframe').contentWindow)
+  </script>
+</body>
+```
+
 ### 3.使用window.name进行跨域
+
+受到同源限制，只能请求同一域名
+
+优势：window.name能保存2M的数据，请求端口可以不同，window.name在文档刷新后任然存在
+
+```js
+// 主页面 http://localhost:80
+const iframe = document.createElement('iframe')
+iframe.style.display = 'none'
+// 防止无限刷新
+let state = 0
+
+iframe.onload = () => {
+  if(state === 1) {
+    console.log(JSON.parse(iframe.contentWindow.name));
+    // 清除创建的iframe
+    iframe.contentWindow.document.write('');
+    iframe.contentWindow.close();
+    document.body.removeChild(iframe);
+  } else if(state === 0) {
+    state = 1;
+    // 加载完成，指向当前域，防止错误，不能只设置域名，设置空页即可
+    iframe.contentWindow.location = 'http://localhost:80/blank.html';
+  }
+}
+iframe.contentWindow.location = 'http://localhost:81/index.html'
+document.appendChild(iframe)
+```
+
+```js
+// 请求页面 http://localhost:81
+window.name = 'hello world'
+```
+
+### 4.local.hash跨域
+
+iframe子页具有修改父页hash值的能力，可以通过这来进行数据传递，而且父页数据不会刷新
+
+但是传递的数据有限
+
+```js
+// a页，同window.name,当state === 1时
+const data = window.location.hash
+```
+
+```js
+// b页
+parent.location.hash = 'hello world'
+```
+
+### 5.window.postMessage跨域
+
+HTML5新特性，可以用来向所有的window对象发送消息
+
+### 6.websocket
+
+### 7.代理
+
+跳过浏览器的同源策略限制，通过服务器进行数据请求即可
