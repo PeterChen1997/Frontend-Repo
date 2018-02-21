@@ -1,26 +1,7 @@
-class People {
-  constructor(name) {
-    this.name = name || 'people'
-  }
 
-  print() {
-    return `print: ${this.name}`
-  }
-}
+const year = 2018
 
-const people = new People('Tom')
-
-console.log (people.name)
-console.log (people.print())
-
-class Teacher extends People {
-  constructor(name, className) {
-    super(name)
-    this.class = className
-  }
-}
-
-const teacher = new Teacher('Peter', 'One Class')
-console.log (teacher.name)
-console.log (teacher.class)
-console.log (teacher.print())
+const date = new Date(`${year}-01-01`)
+console.log(date)
+const weekDay=new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六")
+console.log(weekDay[date.getDay()])
