@@ -1,7 +1,27 @@
+var makeCounter = function() {
+  var privateCounter = 0;
+  function changeBy(val) {
+    privateCounter += val;
+  }
+  return {
+    increment: function() {
+      changeBy(1);
+    },
+    decrement: function() {
+      changeBy(-1);
+    },
+    value: function() {
+      return privateCounter;
+    }
+  }  
+};
 
-const year = 2018
-
-const date = new Date(`${year}-01-01`)
-console.log(date)
-const weekDay=new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六")
-console.log(weekDay[date.getDay()])
+var Counter1 = makeCounter();
+var Counter2 = makeCounter();
+console.log(Counter1.value()); /* logs 0 */
+Counter1.increment();
+Counter1.increment();
+console.log(Counter1.value()); /* logs 2 */
+Counter1.decrement();
+console.log(Counter1.value()); /* logs 1 */
+console.log(Counter2.value()); /* logs 0 */

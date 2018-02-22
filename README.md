@@ -1,3 +1,3 @@
 # FightForOffer
 
-JavaScript 实现
+前端面试准备

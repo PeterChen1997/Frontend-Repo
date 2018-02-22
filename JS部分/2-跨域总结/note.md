@@ -114,7 +114,7 @@ document.appendChild(iframe)
 window.name = 'hello world'
 ```
 
-### 4.local.hash跨域
+### 4.location.hash跨域
 
 iframe子页具有修改父页hash值的能力，可以通过这来进行数据传递，而且父页数据不会刷新
 
