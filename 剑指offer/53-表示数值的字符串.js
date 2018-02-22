@@ -2,4 +2,6 @@
 function isNumeric(s)
 {
     return !isNaN(Number(s))
+    // regexp
+    // return /^[\+\-]?\d*(\.\d+)?([eE][+-]?\d+)?$/.test(s)
 }
