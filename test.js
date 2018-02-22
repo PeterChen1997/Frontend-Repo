@@ -1,2 +1,2 @@
-let str = new String()
-console.log(typeof str)
+let str = "good"
+console.log(str instanceof String)
