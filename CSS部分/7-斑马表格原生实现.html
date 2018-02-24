@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>斑马表格实现</title>
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    table {
+      width: 800px;
+    }
+
+    th,
+    td {
+      padding: 8px;
+      line-height: 20px;
+      text-align: left;
+      vertical-align: top;
+      border-top: 1px solid #ddd;
+    }
+
+    thead:first-child,
+    tr:first-child,
+    th {
+      border-top: 0;
+    }
+
+    tbody>tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tbody tr:hover {
+      background-color: darkseagreen;
+    }
+  </style>
+</head>
+
+<body>
+  <table cellspacing="0">
+    <caption>Awesome table</caption>
+    <thead>
+      <tr>
+        <th>Header content 1</th>
+        <th>Header content 2</th>
+      </tr>
+    </thead>
+    <!-- <tfoot>
+      <tr>
+        <td>Footer content 1</td>
+        <td>Footer content 2</td>
+      </tr>
+    </tfoot> -->
+    <tbody>
+      <tr>
+        <td>Body content 1</td>
+        <td>Body content 2</td>
+      </tr>
+      <tr>
+        <td>Body content 1</td>
+        <td>Body content 2</td>
+      </tr>
+      <tr>
+        <td>Body content 1</td>
+        <td>Body content 2</td>
+      </tr>
+      <tr>
+        <td>Body content 1</td>
+        <td>Body content 2</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <script>
+    
+  </script>
+</body>
+
+</html>
