@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS拖拽DIV(HTML5 API 实现)</title>
+    <style>
+        html {
+            font-size: 30px;
+        }
+        nav {
+            height: 50px;
+            text-align: center;
+            font-size: 1rem;
+        }
+        main {
+            display: flex;
+        }
+        main > div {
+            margin : 20px;
+            flex: 1;
+            border: 2px black dashed;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <nav>请尝试拖拽到右侧</nav>
+    <main>
+        <div class="left">
+            <img draggable="true" id="one" src="http://img2.imgtn.bdimg.com/it/u=4155048693,3557619369&fm=200&gp=0.jpg" alt="">
+            <img draggable="true" id="two" src="http://img2.imgtn.bdimg.com/it/u=4155048693,3557619369&fm=200&gp=0.jpg" alt="">
+            <img draggable="true" id="three" src="http://img2.imgtn.bdimg.com/it/u=4155048693,3557619369&fm=200&gp=0.jpg" alt="">
+        </div>
+        <div class="right">
+
+        </div>
+    </main>
+
+    <script>
+        const info = document.querySelector('nav')
+        const left = document.querySelector('.left')
+        const right = document.querySelector('.right')
+
+        left.ondragstart = (e) => {
+            let imgId = e.target.id
+            let img = document.querySelector(`#${imgId}`)
+            img.ondragend = (e) => {
+                info.textContent = '请尝试拖拽到右侧'
+            }
+            // 通过dataTransfer保存id
+            e.dataTransfer.setData('imgId', imgId)
+        }
+
+        left.ondrag = (e) => {
+            info.textContent = '图片正在被拖动'
+        }
+
+        right.ondragenter = (e) => {
+            e.preventDefault()
+        }
+        right.ondragover = (e) => {
+          // 默认地，无法将数据/元素放置到其他元素中
+            e.preventDefault()
+        }
+
+        right.ondrop = (e) => {
+            let imgId = e.dataTransfer.getData('imgId')
+            let img = document.querySelector(`#${imgId}`)
+            img.parentNode.removeChild(img)
+            right.appendChild(img)
+            info.textContent = '请尝试拖拽到右侧'
+            // 默认行为是以链接形式打开，所以也需要阻止其默认行为
+            e.preventDefault()
+            
+        }
+
+
+    </script>
+</body>
+</html>

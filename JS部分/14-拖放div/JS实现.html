@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS实现div拖放</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .frame {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        .moveDiv {
+            border: 2px solid aquamarine;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="frame">
+        <div class="moveDiv"></div>
+    </div>
+    
+    <script>
+        const div = document.querySelector('.moveDiv')
+        let status = false
+        let startX, startY
+
+        function handleMove(e) {
+            if(!status) return
+            div.style.left = e.clientX - startX + 'px'
+            div.style.top = e.clientY - startY + 'px'
+        }
+
+
+        div.addEventListener('mousedown', (e) => {
+            status = true
+            // 鼠标在div内的位置
+            startX = e.clientX - div.offsetLeft
+            startY = e.clientY - div.offsetTop
+        })
+        div.addEventListener('mousemove', handleMove)
+        div.addEventListener('mouseup', () => { status = false })
+        div.addEventListener('mouseout', () => { status = false })
+    </script>
+</body>
+</html>
