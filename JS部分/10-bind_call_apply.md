@@ -62,4 +62,3 @@ for (var i = 0; i < numbers.length; i++) {
 ### call和apply的不同在于，call除this外接收多个参数，apply除this外接收一个参数数组
 
 ### bind与apply,call不同，实际上bind()方法返回的是一个修改后的函数，而apply()与call()返回的是修改指向后的函数执行结果
-
