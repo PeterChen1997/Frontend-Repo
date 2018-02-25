@@ -3,7 +3,6 @@
 // 递归实现
 function Fibonacci(n) {
   let number = Number(n) === parseInt(n) ? Number(n) : -1
-  console.log(number)
   if(number <= 0) {
     throw new Error('Please input a valid number')
   } else {
@@ -19,7 +18,7 @@ function Fibonacci(n) {
 function FibonacciII(n) {
   let number = Number(n) === parseInt(n) ? Number(n) : -1
   if(number <= 0) {
-    throw new Error('Please')
+    throw new Error('Please ...')
   } else {
     if(n == 1 || n == 2) {
       return 1
