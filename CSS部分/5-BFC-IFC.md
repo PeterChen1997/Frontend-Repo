@@ -39,6 +39,20 @@
 
 原理同上，被覆盖的元素会成为新的BFC，不会被浮动元素覆盖，可用来实现两列布局
 
+```html
+<div class="gege" style="width: 100px;
+  min-height: 600px;
+  background:red;
+  float: left;
+  margin-right: 20px;">gege
+</div>
+<div class="didi" style="margin:20px;
+  min-height: 600px;
+  background: green;
+  display: flow-root;">didi
+</div>
+```
+
 ## IFC
 
 inline formatting context
