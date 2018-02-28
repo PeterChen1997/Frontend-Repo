@@ -89,7 +89,11 @@ console.log(str instanceof String) // false,查找不到原型
 
 出现这个问题的原因是，str是String数据类型的值，但并不是String的实例对象
 
-## 如何判断这个变量是数组
+---
+
+## 例题
+
+### 如何判断这个变量是数组
 
 因为typeof [] / {} 返回都是object，所以需要判断
 
@@ -103,4 +107,16 @@ Object.prototype.toString.call([]) // [object Array]
 // Array原生方法
 Array.isArray([]) // true
 
+```
+
+### 如何判断对象为字符串
+
+```js
+const str = 'good'
+
+typeof str === 'string'
+Object.prototype.toString.call(str)
+
+// 注意不能使用instanceof
+str instanceof string // false,因为str是string数据类型,但不是String的实例对象
 ```
