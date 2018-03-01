@@ -2,28 +2,32 @@
 
 ## 原生实现
 
+1. 创建XMLHttpRequest对象。
+1. 设置响应HTTP请求状态变化的函数。
+1. 创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息，发送HTTP请求。
+1. 在响应HTTP请求状态变化的函数里，获取异步调用返回的数据。
+1. 最后，使用JavaScript 实现 DOM 局部刷新。
+
 ```js
 
-function Ajax(obj){
-  //根据obj对method,data,url等进行初始化
-};
-Ajax.prototype.send = function(){
-  var xhr = new XMLHttpRequest();//新建ajax请求，不兼容IE7以下
-  xhr.onreadystatechange = function(){//注册回调函数
-    if(xhr.readyState === 4)
-      callback(xhr.responseText);
-  }
-  if(method === 'get'){//如果是get方法，需要把data中的数据转化作为url传递给服务器
-    xhr.open(method,url,true);
-    xhr.send(null);
-  }else if(method === 'post'){//如果是post，需要在头中添加content-type说明
-      xhr.open(method,url,true);
-      xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-      xhr.send(JSON.stringify(data));//发送的数据需要转化成JSON格式
-  }else {
-    console.log('不识别的方法:'+method);
-    return fasle;
-  }
+var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4) {
+        if(xmlhttp.status == 200){
+            // do something
+            console.log(xmlhttp.responseText);
+        }
+        else if(xmlhttp.status == 400) {
+            alert('There was an error 400')
+        }
+        else {
+            alert('something else other than 200 was returned')
+        }
+    }
 }
+
+xmlhttp.open("GET", "ajax_info.txt", true);
+xmlhttp.send();
 
 ```

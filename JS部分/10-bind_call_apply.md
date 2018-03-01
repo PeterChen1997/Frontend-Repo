@@ -27,14 +27,12 @@ console.log(getTrueValue()) // 2
 ### bind函数的兼容性写法
 
 ```js
-if (!function() {}.bind) {
-  Function.prototype.bind = function(context) {
-      var self = this
-      var args = Array.prototype.slice.call(arguments);
-      return function() {
-          return self.apply(context, args.slice(1));
-      }
-  };
+Function.prototype.bind = Function.prototype.bind || function(context){
+    var self = this;
+
+    return function(){
+        return self.apply(context, arguments);
+    };
 }
 ```
 
