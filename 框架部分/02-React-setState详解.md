@@ -16,9 +16,9 @@ this.setState(updater[,callback])
   - False:遍历dirtyComponents,调用updateComponent,更新pending state 和 props
   - True:保存组件到dirtyComponents
 
-**解释：**函数batchedUpdates,会将isbatchedUpdates设置为true,在React调用事件处理函数之前就会调用这个函数，造成的后果就是不会同步更新state
+**解释：** 函数batchedUpdates,会将isbatchedUpdates设置为true,在React调用事件处理函数之前就会调用这个函数，造成的后果就是不会同步更新state
 
-**原因：**每次进行setState必然触发更新过程，所以一是可以通过shouldComponentUpdate进行一个筛选，二是可以将之前的setState进行一个merge统一render，保证render不是每次都执行，否则则十分消耗性能
+**原因：** 每次进行setState必然触发更新过程，所以一是可以通过shouldComponentUpdate进行一个筛选，二是可以将之前的setState进行一个merge统一render，保证render不是每次都执行，否则则十分消耗性能
 
 ## setState调用后，会触发哪些生命周期函数
 
