@@ -4,6 +4,8 @@
 
 ## 深拷贝的两种实现
 
+### 循环递归实现
+
 ```js
 var a = {
     name:"mary",
@@ -32,6 +34,8 @@ function deep(obj){
 }
 ```
 
+### JSON转化实现
+
 ```js
 var obj = {
     name : "haha",
@@ -45,6 +49,17 @@ JSON.parse(text);                   //重新将字符串生成一个对象，和
 ---
 
 ## 浅拷贝
+
+### 对象字面量扩展实现
+
+```js
+const deepClone = (obj) => ({
+    __proto__:Object.getPrototypeOf(obj),
+    ...obj
+})
+```
+
+### 最简单的实现
 
 ```js
 function shallowClone(copyObj) {
