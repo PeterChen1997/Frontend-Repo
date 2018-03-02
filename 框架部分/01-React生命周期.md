@@ -1,6 +1,6 @@
 # 生命周期详解
 
-## 实例化
+## 实例化 (mount)
 
 首次实例化
 
@@ -10,14 +10,7 @@
 - render
 - componentDidMount
 
-实例化完成后的更新
-
-- getInitialState
-- componentWillMount
-- render
-- componentDidMount
-
-## 存在期
+## 存在期 (update)
 
 组件已存在时的状态改变
 
@@ -27,7 +20,7 @@
 - render
 - componentDidUpdate
 
-## 销毁&清理期
+## 销毁&清理期 (unmount)
 
 - componentWillUnmount
 
@@ -51,7 +44,7 @@
 
 **5.componentDidMount**：真实的DOM被渲染出来后调用，在该方法中可通过this.getDOMNode()访问到真实的DOM元素。此时已可以使用其他类库来操作这个DOM。
 
-在服务端中，该方法不会被调用。
+在服务端中，该方法不会被调用（服务端渲染返回字符串，不需要操作DOM）
 
 **6.componentWillReceiveProps**：组件接收到新的props时调用，并将其作为参数nextProps使用，此时可以更改组件props及state。
 
