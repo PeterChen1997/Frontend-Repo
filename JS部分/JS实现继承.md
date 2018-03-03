@@ -47,15 +47,15 @@ console.log(instance2.colors);//"red","blue","green"
 
 ```js
 function SuperType(name) {
-this.name = name;
-this.colors = ["red","blue","green"];
+  this.name = name;
+  this.colors = ["red","blue","green"];
 }
 SuperType.prototype.sayName = function() {
-console.log(this.name);
+  console.log(this.name);
 }
 function SubType(name, age) {
-SuperType.call(this,name);//继承属性
-this.age = age;
+  SuperType.call(this,name);//继承属性
+  this.age = age;
 }
 //继承方法
 SubType.prototype = new SuperType();

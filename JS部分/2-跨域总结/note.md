@@ -28,6 +28,8 @@
 
 跨域资源共享，详细可以看阮一峰老师的博客http://www.ruanyifeng.com/blog/2016/04/cors.html
 
+通过设置Access-Control-Allow-Origin白名单实现
+
 ### 1.JSONP(JSON with Padding)
 
 缺点：
