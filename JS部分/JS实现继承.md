@@ -4,6 +4,8 @@
 
 利用原型让一个引用类型继承另外一个引用类型的属性和方法
 
+![img](http://files.jb51.net/file_images/article/201606/2016062216225510.png)
+
 ```js
 function SuperType() {
   this.property = true;
@@ -11,16 +13,14 @@ function SuperType() {
 SuperType.prototype.getSuperValue = function() {
   return this.property;
 }
-function subType() {
+function SubType() {
   this.property = false;
 }
 //继承了SuperType
 SubType.prototype = new SuperType();
-SubType.prototype.getSubValue = function (){
-  return this.property;
-}
+
 var instance = new SubType();
-console.log(instance.getSuperValue());//true
+console.log(instance.getSuperValue());//false
 ```
 
 ## 构造函数继承

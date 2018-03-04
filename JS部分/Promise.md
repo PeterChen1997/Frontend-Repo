@@ -26,8 +26,8 @@ var promise = new Promise(function(resolve, reject) {
 
 ![promise](https://mdn.mozillademos.org/files/8633/promises.png)
 
-- pending: 初始状态, 非 fulfilled 或 rejected.
-- fulfilled: 成功的操作.
+- pending: 初始状态, 非 resolved 或 rejected.
+- resolved: 成功的操作.
 - rejected: 失败的操作.
 - settled: Promise已被fulfilled或rejected，且不是pending
 

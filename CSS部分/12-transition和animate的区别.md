@@ -5,8 +5,37 @@
 ![img](http://img.blog.csdn.net/20160722210815252)
 
 ```css
-transiton: 过渡属性 过渡所需要时间 过渡动画函数 过渡延迟时间；
+transiton: transition-property(过渡属性) transition-duration(过渡所需要时间) transition-timing-function(过渡动画函数) transition-delay(过渡延迟时间)；
 ```
+
+### transition-property
+
+| 值| 描述 |
+|--|--|
+|none|没有属性会获得过渡效果。|
+|all|所有属性都将获得过渡效果。|
+|property|定义应用过渡效果的 CSS 属性名称列表，列表以逗号分隔。|
+
+### transition-duration
+
+transition-duration: time (单位为s或者ms)
+
+### transition-timing-function
+
+| 值 |描述|
+|--|--|
+| linear |  规定以相同速度开始至结束的过渡效果（等于 cubic-bezier(0,0,1,1)）。|
+| ease | 规定慢速开始，然后变快，然后慢速结束的过渡效果（cubic-bezier(0.25,0.1,0.25,1)）。|
+| ease-in | 规定以慢速开始的过渡效果（等于 cubic-bezier(0.42,0,1,1)）。|
+| ease-out | 规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。|
+| ease-in-out | 规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。|
+| cubic-bezier(n,n,n,n) | 在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。|
+
+### transition-delay
+
+transition-delay: time (单位为s或者ms)
+
+---
 
 ### 局限性
 
