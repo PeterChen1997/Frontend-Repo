@@ -1,1 +1,3 @@
-
+{
+  "plugins": ["download-pdf-link"],
+}
