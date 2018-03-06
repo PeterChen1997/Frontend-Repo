@@ -32,7 +32,7 @@
   * [8 Typeof](JS部分/8-typeof.md)
   * [9-变量提升](JS部分/9-变量提升.md)
   * [JS严格模式](JS部分/JS严格模式.md)
-  * [JS事件循环(eventLoop)](JS部分/JS事件循环(eventLoop).md)
+  * [JS事件循环\(eventLoop\)](JS部分/JS事件循环(eventLoop).md)
   * [JS原型链](JS部分/JS原型链.md)
   * [JS实现图片懒加载](JS部分/JS实现图片懒加载.md)
   * [JS实现持续动画](JS部分/JS实现持续动画.md)
@@ -50,7 +50,7 @@
   * [linux常用指令](Linux部分/linux常用指令.md)
 - 前端面试经历
   * [阿里村淘一面](前端面试经历/阿里村淘一面.md)
-  * [阿里村淘一面(2)](前端面试经历/阿里村淘一面(2).md)
+  * [阿里村淘一面\(2\)](前端面试经历/阿里村淘一面(2).md)
 - 剑指offer
   - 总结笔记
     * [全排列的JS实现](剑指offer/总结笔记/全排列的JS实现.md)
