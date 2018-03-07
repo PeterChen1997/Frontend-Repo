@@ -2,7 +2,9 @@
 
 ## 原型继承
 
-利用原型让一个引用类型继承另外一个引用类型的属性和方法
+通过将父类的实例 赋值给 **子类的prototype属性值** ，继承父类的属性和方法
+
+缺点：只复制了方法，并未复制属性，造成子类实例共享属性，造成实例间的属性会相互影响
 
 ![img](http://files.jb51.net/file_images/article/201606/2016062216225510.png)
 
@@ -25,7 +27,9 @@ console.log(instance.getSuperValue());//false
 
 ## 构造函数继承
 
-在子类型构造函数的内部调用超类构造函数，通过使用call()和apply()方法可以在新创建的对象上执行构造函数。
+通过在子类构造函数的内部调用父类构造函数，实现继承
+
+缺点：没有共享同一个方法，并且instance1 instanceof SuperType为false，无法通过原型链判断对象是否属于父类
 
 ```js
 function SuperType() {
@@ -43,7 +47,9 @@ console.log(instance2.colors);//"red","blue","green"
 
 ## 组合继承
 
-将原型链和借用构造函数的技术组合在一块，从而发挥两者之长的一种继承模式
+结合 **原型继承继承方法** 与 **构造继承继承属性** ，实现继承
+
+缺点：父类构造函数被调用两次,子类实例的属性存在两份
 
 ```js
 function SuperType(name) {
@@ -61,7 +67,7 @@ function SubType(name, age) {
 SubType.prototype = new SuperType();
 Subtype.prototype.constructor = Subtype;
 Subtype.prototype.sayAge = function() {
-console.log(this.age);
+  console.log(this.age);
 }
 var instance1 = new SubType("EvanChen",18);
 instance1.colors.push("black");
@@ -73,3 +79,29 @@ console.log(instance2.colors);//"red","blue","green"
 instance2.sayName();//"EvanChen666"
 instance2.sayAge();//20
 ```
+
+## 寄生继承（完美）
+
+子类都有各自的实例不会相互影响，且共享了父类的方法
+
+```js
+function SuperType() {
+  this.colors = ["red","blue","green"];
+}
+SuperType.prototype.getColors = function() {
+  return this.colors
+}
+function SubType() {
+  SuperType.call(this);//继承了SuperType
+}
+SubType.prototype = Object.create(SuperType.prototype)
+const instance1 = new SubType()
+instance1.colors.push('black')
+console.log(instance1.getColors());//"red","blue","green","black"
+var instance2 = new SubType();
+console.log(instance2.getColors());//"red","blue","green"
+```
+
+## ES6实现继承
+
+通过extends实现，效果与寄生继承一致
