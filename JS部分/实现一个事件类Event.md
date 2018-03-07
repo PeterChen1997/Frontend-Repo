@@ -41,4 +41,14 @@ class Event {
                 fns.length = 0;
             }
   }
-  ```
+  // 测试用例
+const event = new Event();
+event.on('test', (a) => {
+    console.log(a);
+});
+event.trigger('test', 'hello world');
+
+event.off('test');
+event.trigger('test', 'hello world');
+
+ ```
