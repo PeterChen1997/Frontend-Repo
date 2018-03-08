@@ -33,13 +33,13 @@
   * [9-变量提升](JS部分/9-变量提升.md)
   * [Event Emitter](JS部分/EventEmitter.md)
   * [JS严格模式](JS部分/JS严格模式.md)
-  * [JS事件循环(eventLoop)](JS部分/JS事件循环(eventLoop).md)
+  * [JS事件循环-eventLoop](JS部分/JS事件循环-eventLoop.md)
   * [JS原型链](JS部分/JS原型链.md)
-  * [JS实现发布订阅(class-event)](JS部分/JS实现发布订阅(class-event).md)
+  * [JS实现发布订阅-class-event](JS部分/JS实现发布订阅-class-event.md)
   * [JS实现图片懒加载](JS部分/JS实现图片懒加载.md)
   * [JS实现持续动画](JS部分/JS实现持续动画.md)
   * [JS实现继承](JS部分/JS实现继承.md)
-  * [JS模块化编程(AMD,CMD,CommonJS)](JS部分/JS模块化编程(AMD,CMD,CommonJS).md)
+  * [JS模块化编程-AMD-CMD-CommonJS](JS部分/JS模块化编程-AMD-CMD-CommonJS.md)
   * [JS深浅拷贝](JS部分/JS深浅拷贝.md)
   * [MVC MVVM](JS部分/MVC-MVVM.md)
   * [new的作用](JS部分/new的作用.md)
@@ -51,13 +51,6 @@
   * [常见字符串处理](JS部分/常见字符串处理.md)
 - Linux部分
   * [linux常用指令](Linux部分/linux常用指令.md)
-- Method
-  * [前端方向发展](method/前端方向发展.md)
-  * [如何学习](method/如何学习.md)
-  * [学习进度](method/学习进度.md)
-  * [擅长的和不擅长的](method/擅长的和不擅长的.md)
-  * [结束问题](method/结束问题.md)
-  * [阿里](method/阿里.md)
 - 前端面试经历
   * [阿里村淘一面-2](前端面试经历/阿里村淘一面-2.md)
   * [阿里村淘一面](前端面试经历/阿里村淘一面.md)
@@ -80,6 +73,7 @@
     * [React面试题](框架部分/React/React面试题.md)
   - Vue
     * [Vue双向绑定实现](框架部分/Vue/Vue双向绑定实现.md)
+  * [如何确定项目的技术选型](框架部分/如何确定项目的技术选型.md)
 - 浏览器部分
   * [*03-HTTP与HTTPS](浏览器部分/*03-HTTP与HTTPS.md)
   * [*04-浏览器存储方式详解](浏览器部分/*04-浏览器存储方式详解.md)
