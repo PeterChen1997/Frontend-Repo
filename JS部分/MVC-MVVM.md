@@ -14,10 +14,12 @@
 
 组成部分Model、View、ViewModel
 
-View：UI界面
+建立了数据和视图之间的绑定，简化前端代码
 
-ViewModel：它是View的抽象，负责View与Model之间信息转换，将View的Command传送到Model；
+- View：UI界面
+- ViewModel：它是View的抽象，负责View与Model之间信息转换，将View的Command传送到Model；
+- Model：数据访问层
 
-Model：数据访问层
+![imgs](https://images2015.cnblogs.com/blog/1131758/201703/1131758-20170323093701283-975203660.png)
 
 ？不适合SEO？

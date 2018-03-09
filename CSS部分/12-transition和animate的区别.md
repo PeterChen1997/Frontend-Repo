@@ -1,5 +1,19 @@
 # Topic
 
+<!-- TOC -->
+
+- [Topic](#topic)
+  - [transition](#transition)
+    - [transition-property](#transition-property)
+    - [transition-duration](#transition-duration)
+    - [transition-timing-function](#transition-timing-function)
+    - [transition-delay](#transition-delay)
+    - [局限性](#局限性)
+  - [animation](#animation)
+  - [区别](#区别)
+
+<!-- /TOC -->
+
 ## transition
 
 ![img](http://img.blog.csdn.net/20160722210815252)
