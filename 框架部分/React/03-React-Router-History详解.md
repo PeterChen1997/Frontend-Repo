@@ -4,15 +4,15 @@
 
 > BrowserRouter>, HashRouter>, MemoryRouter>, StaticRouter>
 
-## \<MemoryRouter>
+## MemoryRouter>
 
 组件在内存中保存“URL”信息，不会修改浏览器的地址栏，往往用于React Native或测试环境等非浏览器环境
 
-## \<StaticRouter>
+## StaticRouter>
 
 组件从名字能看出它从不修改路由，这在服务器端渲染时很有用
 
-## \<BrowserRouter> 与 \<HashRouter>
+## BrowserRouter> 与 HashRouter>
 
 前者：http://127.0.0.1:3000/article/num1
 
