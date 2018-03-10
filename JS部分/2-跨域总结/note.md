@@ -1,5 +1,22 @@
 # 跨域总结
 
+<!-- TOC -->
+
+- [跨域总结](#跨域总结)
+  - [什么是跨域](#什么是跨域)
+  - [为什么要跨域](#为什么要跨域)
+  - [如何实现跨域](#如何实现跨域)
+    - [服务器端CORS(Cross-origin resource sharing)](#服务器端corscross-origin-resource-sharing)
+    - [1.JSONP(JSON with Padding)](#1jsonpjson-with-padding)
+    - [2.通过修改document.domain进行跨域](#2通过修改documentdomain进行跨域)
+    - [3.使用window.name进行跨域](#3使用windowname进行跨域)
+    - [4.location.hash跨域](#4locationhash跨域)
+    - [5.window.postMessage跨域](#5windowpostmessage跨域)
+    - [6.websocket](#6websocket)
+    - [7.代理](#7代理)
+
+<!-- /TOC -->
+
 ## 什么是跨域
 
 这就不得不提到，浏览器的 **同源策略** ：
@@ -38,7 +55,7 @@
 1. 不能注册success，error事件监听函数，无法判断请求结果
 1. JSONP是从其他域加载代码执行，容易受到CSRF攻击，安全性无法保障
 
-是通过动态创建script标签，利用src进行跨域请求，虽然请求脚本会受同源策略的限制，但是调用时则不受限制，如\<script>\<img>\<iframe>这些含有src属性的标签
+是通过动态创建script标签，利用src进行跨域请求，虽然请求脚本会受同源策略的限制，但是调用时则不受限制，如script>img>iframe>这些含有src属性的标签
 
 ```js
 // 下面是一段使用彩云天气请求天气预报的例子
