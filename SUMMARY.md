@@ -1,5 +1,12 @@
 # Your Book Title
 
+- Book
+  - JS部分
+    * [js模块化](_book/JS部分/js模块化.md)
+    * [常用设计模式](_book/JS部分/常用设计模式.md)
+    * [数组的原生方法](_book/JS部分/数组的原生方法.md)
+  - 浏览器部分
+    * [HTTP响应头](_book/浏览器部分/HTTP响应头.md)
 - CSS部分
   * [*13-媒体查询](CSS部分/*13-媒体查询.md)
   * [1-position详解](CSS部分/1-position详解.md)
@@ -14,6 +21,7 @@
   * [9-伪类-伪元素](CSS部分/9-伪类-伪元素.md)
   * [保持宽高比例](CSS部分/保持宽高比例.md)
   * [小知识点](CSS部分/小知识点.md)
+  * [移动端屏幕尺寸适配方案](CSS部分/移动端屏幕尺寸适配方案.md)
 - HTML部分
   * [DOM优化](HTML部分/DOM优化.md)
   * [HTML5新标签](HTML部分/HTML5新标签.md)
@@ -33,7 +41,6 @@
   * [6-JQuery部分](JS部分/6-JQuery部分.md)
   * [8 Typeof](JS部分/8-typeof.md)
   * [9-变量提升](JS部分/9-变量提升.md)
-  * [Event Emitter](JS部分/EventEmitter.md)
   * [JS严格模式](JS部分/JS严格模式.md)
   * [JS事件循环-eventLoop](JS部分/JS事件循环-eventLoop.md)
   * [JS原型链](JS部分/JS原型链.md)
@@ -43,6 +50,7 @@
   * [JS实现异步](JS部分/JS实现异步.md)
   * [JS实现持续动画](JS部分/JS实现持续动画.md)
   * [JS实现继承](JS部分/JS实现继承.md)
+  * [js模块化](JS部分/js模块化.md)
   * [JS模块化编程-AMD-CMD-CommonJS](JS部分/JS模块化编程-AMD-CMD-CommonJS.md)
   * [JS深浅拷贝](JS部分/JS深浅拷贝.md)
   * [MVC MVVM](JS部分/MVC-MVVM.md)
@@ -53,7 +61,10 @@
   * [函数节流与函数去抖](JS部分/函数节流与函数去抖.md)
   * [十行代码实现简易Promise](JS部分/十行代码实现简易Promise.md)
   * [小知识点](JS部分/小知识点.md)
+  * [常用设计模式](JS部分/常用设计模式.md)
   * [常见字符串处理](JS部分/常见字符串处理.md)
+  * [数组的原生方法](JS部分/数组的原生方法.md)
+  * [正则对象原生方法](JS部分/正则对象原生方法.md)
 - Linux部分
   * [linux常用指令](Linux部分/linux常用指令.md)
 - 前端面试经历
@@ -86,11 +97,13 @@
   * [01-浏览器页面渲染过程](浏览器部分/01-浏览器页面渲染过程.md)
   * [02-HTTP状态码总结](浏览器部分/02-HTTP状态码总结.md)
   * [HTTP1.0与HTTP1.1](浏览器部分/HTTP1.0与HTTP1.1.md)
+  * [HTTP响应头](浏览器部分/HTTP响应头.md)
   * [HTTP请求和响应](浏览器部分/HTTP请求和响应.md)
   * [前端性能优化](浏览器部分/前端性能优化.md)
   * [前端渲染VS后端渲染](浏览器部分/前端渲染VS后端渲染.md)
   * [小知识点](浏览器部分/小知识点.md)
   * [浏览器存储方式详解](浏览器部分/浏览器存储方式详解.md)
+  * [浏览器安全](浏览器部分/浏览器安全.md)
   * [浏览器缓存](浏览器部分/浏览器缓存.md)
   * [输入URL后](浏览器部分/输入URL后.md)
 - 计算机网络部分
