@@ -18,6 +18,6 @@ CDN主要功能是在不同的地点缓存内容，通过负载均衡技术，�
 
 CDN网络则是在用户和服务器之间增加缓存层，将用户的访问请求引导到最优的缓存节点而不是服务器源站点，从而加速访问速度
 
-![imgs](https://pic2.zhimg.com/80/049b124feb55100ff2f147b768ad4c8b_hd.jpg)
+![imgs](https://www.peterchen.club/imgs/DNS.jpg)
 
 ## 怎么用

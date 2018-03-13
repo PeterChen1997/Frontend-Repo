@@ -4,6 +4,7 @@
 
 - 浏览器接收用户输入
 - 本地DNS(Domain Name System)->网站授权DNS->解析URL出IP(DNS -> .com -> baidu.com -> www.baidu.com)
+- 查询本地IP地址，找不到则通过默认网关查询网络建立连接
 - 通过socket发送数据
   - HTTP(TCP协议)
 - 服务器通过Web Server对请求进行处理并返回结果
