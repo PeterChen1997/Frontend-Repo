@@ -12,3 +12,14 @@ a.__proto__ // function
 a.__proto__.__proto__ // object
 a.__proto__.__proto__.__proto__ // null
 ```
+
+### 举例：Array实例如何拥有push方法
+
+- 实例化数组，数组a本身没有push方法
+- 沿着原型链向上查找
+- 在实例化时继承Array原型，获取Array原型方法push
+
+```js
+let a = new Array()
+a.__proto__ == Array.prototype // array prototype
+```

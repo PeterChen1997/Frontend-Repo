@@ -1,10 +1,5 @@
 # Your Book Title
 
-- Book
-  - 数据结构部分
-    * [03-查找算法](_book/数据结构部分/03-查找算法.md)
-  - 计算机网络部分
-    * [TCP-IP与子网掩码](_book/计算机网络部分/TCP-IP与子网掩码.md)
 - CSS部分
   * [*13-媒体查询](CSS部分/*13-媒体查询.md)
   * [1-position详解](CSS部分/1-position详解.md)
