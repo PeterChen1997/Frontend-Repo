@@ -10,3 +10,5 @@
 - 服务器通过Web Server对请求进行处理并返回结果
 - 浏览器接收数据，gzip解压(如果存在gzip压缩)
 - 根据编码解析数据
+
+![](http://onb5ufwvw.bkt.clouddn.com/18-3-14/74320453.jpg)
