@@ -19,7 +19,8 @@ transform:变形。改变CSS3中主要包括
 - 旋转：rotate() 顺时针旋转给定的角度，允许负值 rotate(30deg)
 - 扭曲：skew() 元素翻转给定的角度,根据给定的水平线（X 轴）和垂直线（Y 轴）参数：skew(30deg,20deg)
 - 缩放：scale() 放大或缩小，根据给定的宽度（X 轴）和高度（Y 轴）参数： scale(2,4)
-- 移动：translate() 平移，传进 x,y值，代表沿x轴和y轴平移的距离所有的2D转换方法组合在一起： matrix()  旋转、缩放、移动以及倾斜元素matrix(scale.x ,, , scale.y , translate.x, translate.y)
+- 移动：translate() 平移，传进 x,y值，代表沿x轴和y轴平移的距离
+- 所有的2D转换方法组合在一起： matrix()  旋转、缩放、移动以及倾斜元素matrix(scale.x , scale.y , translate.x, translate.y)
 - 改变起点位置 transform-origin: bottom left;
 
 > 综合起来使用：transform: 30deg 1.5 30deg 20deg 100px 200px;
