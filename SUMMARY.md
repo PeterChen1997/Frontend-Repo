@@ -1,10 +1,5 @@
 # Your Book Title
 
-- Book
-  - 数据结构部分
-    * [03-查找算法](_book/数据结构部分/03-查找算法.md)
-  - 计算机网络部分
-    * [TCP-IP与子网掩码](_book/计算机网络部分/TCP-IP与子网掩码.md)
 - CSS部分
   * [*13-媒体查询](CSS部分/*13-媒体查询.md)
   * [1-position详解](CSS部分/1-position详解.md)
@@ -18,9 +13,11 @@
   * [8 Box Sizing](CSS部分/8-box-sizing.md)
   * [9-伪类-伪元素](CSS部分/9-伪类-伪元素.md)
   * [transition实现类轮播图方法](CSS部分/transition实现类轮播图方法.md)
+  * [三栏布局-中间自适应](CSS部分/三栏布局-中间自适应.md)
   * [保持宽高比例](CSS部分/保持宽高比例.md)
   * [小知识点](CSS部分/小知识点.md)
   * [移动端屏幕尺寸适配方案](CSS部分/移动端屏幕尺寸适配方案.md)
+  * [隐藏页面元素的五种方法](CSS部分/隐藏页面元素的五种方法.md)
 - HTML部分
   * [DOM优化](HTML部分/DOM优化.md)
   * [HTML5新标签](HTML部分/HTML5新标签.md)

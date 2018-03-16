@@ -14,7 +14,7 @@ class Event {
     // 将同一类型事件放到一个数组中
     // 这里的数组是队列，遵循先进先出
     // 即先绑定的事件先触发
-    if(!this._cache[type]) {
+    if(!this._cache.hasOwnProperty(type)) {
         this._cache[type] = []
     }
     this._cache[type].push(callback)
