@@ -12,8 +12,9 @@
     - [3.使用window.name进行跨域](#3使用windowname进行跨域)
     - [4.location.hash跨域](#4locationhash跨域)
     - [5.window.postMessage跨域](#5windowpostmessage跨域)
-    - [6.websocket](#6websocket)
-    - [7.代理](#7代理)
+    - [6.图片Ping](#6图片ping)
+    - [7.websocket](#7websocket)
+    - [8.代理](#8代理)
 
 <!-- /TOC -->
 
@@ -153,8 +154,34 @@ parent.location.hash = 'hello world'
 
 HTML5新特性，可以用来向所有的window对象发送消息
 
-### 6.websocket
+```js
+// ('msg', '*') 第二个参数是限定域，‘*’为通配符
+// A page
+window.postMessage('hello world', '*')
+// B page
+window.onmessage = function(e) {
+  e = e || event
+  alert(e.data)
+}
+```
 
-### 7.代理
+### 6.图片Ping
+
+图片ping跨域只能发送get请求，并且不能访问响应的文本，只能监听是否响应而已，可以用来追踪广告点击
+
+```js
+let img = new Image()
+img.src = 'https://api.peterchen.club/articles'
+img.onerror = () {
+  console.log('error')
+}
+img.onload = () {
+  console.log('success)
+}
+```
+
+### 7.websocket
+
+### 8.代理
 
 跳过浏览器的同源策略限制，通过服务器进行数据请求即可

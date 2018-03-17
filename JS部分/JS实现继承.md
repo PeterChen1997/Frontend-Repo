@@ -60,15 +60,16 @@ SuperType.prototype.sayName = function() {
   console.log(this.name);
 }
 function SubType(name, age) {
-  SuperType.call(this,name);//继承属性
+  SuperType.call(this,name);//第二次调用SuperType,屏蔽了原型中的两个同名属性
   this.age = age;
 }
 //继承方法
-SubType.prototype = new SuperType();
+SubType.prototype = new SuperType(); // 第一次调用
 Subtype.prototype.constructor = Subtype;
 Subtype.prototype.sayAge = function() {
   console.log(this.age);
 }
+
 var instance1 = new SubType("EvanChen",18);
 instance1.colors.push("black");
 consol.log(instance1.colors);//"red","blue","green","black"
@@ -80,26 +81,42 @@ instance2.sayName();//"EvanChen666"
 instance2.sayAge();//20
 ```
 
-## 寄生继承（完美）
+## 寄生式继承
+
+创建一个用于仅用于封装继承过程的函数
+
+```js
+function createAnother(original) {
+  var clone = Object(original)
+  clone.sayHi = function() {
+    alert('hi')
+  }
+  return clone
+}
+```
+
+
+## 寄生组合式继承
 
 子类都有各自的实例不会相互影响，且共享了父类的方法
 
 ```js
-function SuperType() {
+function SuperType(name) {
+  this.name = name
   this.colors = ["red","blue","green"];
 }
 SuperType.prototype.getColors = function() {
   return this.colors
 }
-function SubType() {
-  SuperType.call(this);//继承了SuperType
+function SubType(name, age) {
+  SuperType.call(this， name);
+  this.age = age
 }
-SubType.prototype = Object.create(SuperType.prototype)
-const instance1 = new SubType()
-instance1.colors.push('black')
-console.log(instance1.getColors());//"red","blue","green","black"
-var instance2 = new SubType();
-console.log(instance2.getColors());//"red","blue","green"
+SubType.prototype = Object.create(SuperType.prototype)// 不必调用超类构造函数，只需要副本即可
+SubType.prototype.constructor = SubType
+SubType.prototype.sayAge = function() {
+  alert(this.age)
+}
 ```
 
 ## ES6实现继承
