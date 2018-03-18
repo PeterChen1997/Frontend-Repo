@@ -14,4 +14,4 @@ Accept、Accept-Charset、Accept- Encoding、Accept-Language、Authorization、F
 
 响应头，响应行，响应体
 
-响应头域包含Age、Location、Proxy-Authenticate、Public、Retry- After、Server、Vary、Warning、WWW-Authenticate
+响应头域包含Age、Location、Proxy-Authenticate、Public、Retry- After、Server、Vary、Warning、WWW-Authenticate、Content-Length
