@@ -1,5 +1,8 @@
 # Your Book Title
 
+- Book
+  - JS部分
+    * [JS链式调用](_book/JS部分/JS链式调用.md)
 - CSS部分
   * [*13-媒体查询](CSS部分/*13-媒体查询.md)
   * [1-position详解](CSS部分/1-position详解.md)
@@ -12,8 +15,10 @@
   * [6-浮动清除方法](CSS部分/6-浮动清除方法.md)
   * [8 Box Sizing](CSS部分/8-box-sizing.md)
   * [9-伪类-伪元素](CSS部分/9-伪类-伪元素.md)
+  * [link与@import的区别](CSS部分/link与@import的区别.md)
   * [transition实现类轮播图方法](CSS部分/transition实现类轮播图方法.md)
   * [三栏布局-中间自适应](CSS部分/三栏布局-中间自适应.md)
+  * [优雅降级与渐进增强](CSS部分/优雅降级与渐进增强.md)
   * [保持宽高比例](CSS部分/保持宽高比例.md)
   * [小知识点](CSS部分/小知识点.md)
   * [移动端屏幕尺寸适配方案](CSS部分/移动端屏幕尺寸适配方案.md)
@@ -52,11 +57,13 @@
   * [js模块化](JS部分/js模块化.md)
   * [JS模块化编程-AMD-CMD-CommonJS](JS部分/JS模块化编程-AMD-CMD-CommonJS.md)
   * [JS深浅拷贝](JS部分/JS深浅拷贝.md)
+  * [JS链式调用](JS部分/JS链式调用.md)
   * [MVC MVVM](JS部分/MVC-MVVM.md)
   * [new的作用](JS部分/new的作用.md)
   * [Promise](JS部分/Promise.md)
   * [事件传递机制](JS部分/事件传递机制.md)
   * [使用Promise封装Ajax](JS部分/使用Promise封装Ajax.md)
+  * [内存泄漏](JS部分/内存泄漏.md)
   * [函数节流与函数去抖](JS部分/函数节流与函数去抖.md)
   * [十行代码实现简易Promise](JS部分/十行代码实现简易Promise.md)
   * [小知识点](JS部分/小知识点.md)
