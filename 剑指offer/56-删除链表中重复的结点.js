@@ -4,6 +4,7 @@
     this.val = x;
     this.next = null;
 }*/
+
 function deleteDuplication(pHead)
 {
     if(!pHead || !pHead.next) {

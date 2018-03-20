@@ -5,6 +5,8 @@
     this.left = null;
     this.right = null;
 } */
+
+// 递归查看左右子树是否相等
 function isSymmetricalII(lRoot,rRoot) {
   if(!lRoot && !rRoot) {
     return true

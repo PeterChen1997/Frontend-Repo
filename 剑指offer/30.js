@@ -1,4 +1,4 @@
-// 题目描述： 求输入数组的，连续子数组的和的最大值
+// 题目描述： 求输入数组的，!连续!子数组的和的最大值
 
 function FindGreatestSumOfSubArray(array)
 {
@@ -9,7 +9,7 @@ function FindGreatestSumOfSubArray(array)
     let tempMax = array[0]
     for(let i = 1; i < array.length; i++) {
         // 判断是否tempMax是否为负数，并且比下一位数更小，如果是，则用大的替换tempMax
-        if(array[i] > tempMax && tempMax < 0) {
+        if(array[i] > tempMax && tempMax < 0) {b
             tempMax = array[i]
             continue
         }

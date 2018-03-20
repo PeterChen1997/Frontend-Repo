@@ -7,6 +7,7 @@
     this.next = null;
 }*/
 
+// 统一后半截，一一对比
 function FindFirstCommonNode(pHead1, pHead2)
 {
     if(!pHead1 || !pHead2) {

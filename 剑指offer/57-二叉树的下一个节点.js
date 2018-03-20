@@ -6,6 +6,7 @@
     this.right = null;
     this.next = null;
 }*/
+
 function GetNext(pNode)
 {
     if(!pNode) {

@@ -6,8 +6,8 @@
     this.right = null;
 } */
 
-// 前序遍历：中左右：第一个节点为根节点
-// 中序遍历：左中右
+// 前序遍历：根左右：第一个节点为根节点
+// 中序遍历：左根右
 function reConstructBinaryTree(pre, vin)
 {
     if (pre.length == 0 || vin.length == 0) {

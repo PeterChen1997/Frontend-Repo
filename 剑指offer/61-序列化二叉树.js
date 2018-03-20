@@ -9,6 +9,8 @@
     this.right = null;
 } */
 
+// 思路：先序遍历进行递归存储，递归拆解
+
 let arr = []
 
 function Serialize(pRoot)

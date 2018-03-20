@@ -1,5 +1,7 @@
 // 题目描述：构建乘积数组，b[i] = a[0]*a[1]*...a[i-1]*a[i+1]*...a[n-1]
 
+// 思路：分为前半部分 和 后半部分
+// 进行递归
 function multiply(array)
 {
     // write code here

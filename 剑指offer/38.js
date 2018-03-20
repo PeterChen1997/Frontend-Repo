@@ -7,6 +7,8 @@ function TreeNode(x) {
     this.right = null;
 } 
 */
+
+// 递归查找左右子树，比较后，返回较大的+1
 function TreeDepth(pRoot)
 {
     if(!pRoot) {

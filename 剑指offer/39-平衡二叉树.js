@@ -5,6 +5,10 @@
     this.left = null;
     this.right = null;
 } */
+
+// 平衡二叉树：两边子树高度差不超过一
+
+// 思路：递归查找左右高度
 function IsBalanced_Solution(pRoot)
 {
     if(!pRoot) {
