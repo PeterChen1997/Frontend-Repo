@@ -1,8 +1,5 @@
 # Your Book Title
 
-- Book
-  - 前端面试经历
-    * [腾讯一面](_book/前端面试经历/腾讯一面.md)
 - CSS部分
   * [*13-媒体查询](CSS部分/*13-媒体查询.md)
   * [1-position详解](CSS部分/1-position详解.md)
