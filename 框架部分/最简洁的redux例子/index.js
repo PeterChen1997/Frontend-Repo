@@ -39,14 +39,14 @@ function counter(state = { count: 0 }, action) {
 const store = createStore(counter) // 接受三个参数 reducer, [preloadedState], enhancer
 
 // Map Redux state to component props
-function mapStateToProps(state) { //  把state映射到prop
+function mapStateToProps(state) { //  把state映射到props
   return {
     value: state.count   
   }
 }
 
 // Map Redux actions to component props
-function mapDispatchToProps(dispatch) {  // 参数(dispatch,ownProps). dispatch 是触发 Action 的唯一方法。把action的方法映射到prop 
+function mapDispatchToProps(dispatch) {  // 参数(dispatch,ownProps). dispatch 是触发 Action 的唯一方法。把action的方法映射到props
   return { 
     onIncreaseClick: () => dispatch(increaseAction)
   }
