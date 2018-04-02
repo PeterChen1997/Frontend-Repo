@@ -23,8 +23,7 @@ Counter.propTypes = {
 }
 
 // Action
-const increaseAction = { type: 'increase' }
-
+const increaseAction = { type: 'increase' } //actionType 是必选字段 
 // Reducer
 function counter(state = { count: 0 }, action) {
   const count = state.count
@@ -32,23 +31,23 @@ function counter(state = { count: 0 }, action) {
     case 'increase':
       return { count: count + 1 }
     default:
-      return state
+      return state  // 每次返回新的state，不可直接对state进行修改。
   }
 }
 
 // Store
-const store = createStore(counter)
+const store = createStore(counter) // 接受三个参数 reducer, [preloadedState], enhancer
 
 // Map Redux state to component props
-function mapStateToProps(state) {
+function mapStateToProps(state) { //  把state映射到prop
   return {
-    value: state.count
+    value: state.count   
   }
 }
 
 // Map Redux actions to component props
-function mapDispatchToProps(dispatch) {
-  return {
+function mapDispatchToProps(dispatch) {  // 参数(dispatch,ownProps). dispatch 是触发 Action 的唯一方法。把action的方法映射到prop 
+  return { 
     onIncreaseClick: () => dispatch(increaseAction)
   }
 }
@@ -57,7 +56,7 @@ function mapDispatchToProps(dispatch) {
 const App = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Counter)
+)(Counter)   
 
 ReactDOM.render(
   <Provider store={store}>
