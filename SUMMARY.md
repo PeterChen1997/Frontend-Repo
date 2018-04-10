@@ -43,6 +43,7 @@
   * [6-JQuery部分](JS部分/6-JQuery部分.md)
   * [8 Typeof](JS部分/8-typeof.md)
   * [9-变量提升](JS部分/9-变量提升.md)
+  * [ES7装饰器](JS部分/ES7装饰器.md)
   * [JS严格模式](JS部分/JS严格模式.md)
   * [JS事件循环-eventLoop](JS部分/JS事件循环-eventLoop.md)
   * [JS原型链](JS部分/JS原型链.md)
