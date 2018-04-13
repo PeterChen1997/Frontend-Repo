@@ -25,37 +25,3 @@ document.getElementById('txt').addEventListener('keyup', function (e) {
     obj.txt = e.target.value
 })
 ```
-
-## 监听对象属性变化
-
-```js
-export function defineReactive (
-  obj: Object,
-  key: string,
-  val: any,
-  customSetter?: ?Function,
-  shallow?: boolean
-) {
-  // 创建订阅对象
-  const dep = new Dep()
-
-  // 获取obj对象的key属性的描述
-  const property = Object.getOwnPropertyDescriptor(obj, key)
-  // configurable:false 修改无效 返回
-  if (property && property.configurable === false) {
-    return
-  }
-
-  // 缓存之前的 getters/setters
-  const getter = property && property.get
-  const setter = property && property.set
-  // ???
-  if ((!getter || setter) && arguments.length === 2) {
-    val = obj[key]
-  }
-
-  // 创建一个观察者对象
-  let childOb = observe(val)
-  
-}
-```
