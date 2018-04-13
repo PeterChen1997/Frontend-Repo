@@ -50,3 +50,62 @@ Promise.all([promise1,promise2]).then(function(value){
     console.log(value); // 打印[1,2]
 });
 ```
+
+## 如何实现简单的promise
+
+```js
+class Promsie {
+    constructor() {
+        this.callbacks = []
+    }
+
+    resolve(result) {
+        this.complete('resolve', result)
+    }
+
+    reject(result){
+      this.complete('reject', result)
+    }
+
+    complete(type, result) {
+        if(type === 'reject' && this.oncatch) {
+            this.callbacks = []
+            this.oncatch(result)
+        } else if(this.callbacks[0]) {
+            let handleObj = this.callbacks.shift()
+            if(handleObj[type]) {
+                handleObj[type](result)
+            }
+        }
+    }
+
+    then(onsuccess, onfail) {
+        this.callbacks.push({
+            resolve: onsuccess,
+            reject: onfail
+        })
+        return this
+    }
+
+    catch(onfail) {
+        this.oncatch = onfail
+        return this
+    }
+}
+
+const promise = new Promise()
+fn1().then(fn2, onfn1error)
+       .then(fn3, onfn2error)
+       .catch(onerror)
+
+function fn1(){
+    setTimeout(function(){
+        if(Math.random() > 0.5){
+            promise.resolve('杭州')
+        }else{
+            promise.reject('fn1 error')
+        }
+    })
+    return promise
+}
+```
