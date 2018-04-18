@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        body,html{
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        color: #000000;
+    }
+    table{
+        border-collapse: collapse;
+        width: 100%;
+        table-layout: fixed;
+    }
+    thead{
+        background: #3d444c;
+        color: #ffffff;
+    }
+    td,th{
+        border: 1px solid #e1e1e1;
+        padding: 0;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr><th>id</th><th>price</th><th>sales</th></tr>
+        </thead>
+        <tbody id="jsList">
+            <tr><td>1</td><td>10.0</td><td>800</td></tr>
+            <tr><td>2</td><td>30.0</td><td>600</td></tr>
+            <tr><td>3</td><td>20.5</td><td>700</td></tr>
+            <tr><td>4</td><td>40.5</td><td>500</td></tr>
+            <tr><td>5</td><td>60.5</td><td>300</td></tr>
+            <tr><td>6</td><td>50.0</td><td>400</td></tr>
+            <tr><td>7</td><td>70.0</td><td>200</td></tr>
+            <tr><td>8</td><td>80.5</td><td>100</td></tr>
+        </tbody>
+    </table>
+
+    <script>
+
+        let table = document.querySelector('#jsList')
+        let tRows = table.rows
+    
+        let tableDataArr = []
+        let initState = false
+
+        function init() {
+            if(initState) return
+
+            for(let i = 0; i < tRows.length; i++) {
+                tableDataArr.push(tRows[i].innerText.split(/\s+/))
+            }
+
+            initState = true
+        }
+
+        function handleChange() {
+            let result = tableDataArr.map(tr => {
+                return `
+                    <tr>
+                        <td>${tr[0]}</td>
+                        <td>${tr[1]}</td>
+                        <td>${tr[2]}</td>
+                    </tr>
+                `
+            }).join("")
+            table.innerHTML = result
+        }
+        
+        
+        function sort(type, order) {
+            
+            init()
+
+            switch(type) {
+                case 'id':
+                    tableDataArr = tableDataArr.sort((a, b) => {
+                        return a[0] > b[0] ? 1 : -1
+                    })
+                    break
+                case 'price':
+                    tableDataArr = tableDataArr.sort((a, b) => {
+                        return a[1] > b[1] ? 1 : -1
+                    })
+                    break
+                case 'sales':
+                    tableDataArr = tableDataArr.sort((a, b) => {
+                        return a[2] > b[2] ? 1 : -1
+                    })
+                    break
+            }
+
+            if(order === 'desc') {
+                tableDataArr = tableDataArr.reverse()
+            }
+
+            handleChange()
+        }
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
