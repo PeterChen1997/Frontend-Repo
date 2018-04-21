@@ -12,6 +12,7 @@
   * [6-浮动清除方法](CSS部分/6-浮动清除方法.md)
   * [8 Box Sizing](CSS部分/8-box-sizing.md)
   * [9-伪类-伪元素](CSS部分/9-伪类-伪元素.md)
+  * [CSS3新标准](CSS部分/CSS3新标准.md)
   * [link与@import的区别](CSS部分/link与@import的区别.md)
   * [transition实现类轮播图方法](CSS部分/transition实现类轮播图方法.md)
   * [三栏布局-中间自适应](CSS部分/三栏布局-中间自适应.md)
@@ -23,8 +24,9 @@
 - GO部分
   * [GO环境搭建](GO部分/GO环境搭建.md)
 - HTML部分
+  * [BOM对象](HTML部分/BOM对象.md)
   * [DOM优化](HTML部分/DOM优化.md)
-  * [HTML5新标签](HTML部分/HTML5新标签.md)
+  * [HTML5新标准](HTML部分/HTML5新标准.md)
   * [meta标签的作用](HTML部分/meta标签的作用.md)
   * [块与行内元素](HTML部分/块与行内元素.md)
   * [标准模式与混杂模式](HTML部分/标准模式与混杂模式.md)
@@ -115,6 +117,7 @@
     * [Vue中的数据劫持](框架部分/Vue/Vue中的数据劫持.md)
     * [Vue的生命周期](框架部分/Vue/Vue的生命周期.md)
     * [vue面试题总结](框架部分/Vue/vue面试题总结.md)
+  * [VDOM简易实现](框架部分/VDOM简易实现.md)
   * [前端路由与后端路由](框架部分/前端路由与后端路由.md)
   * [如何确定项目的技术选型](框架部分/如何确定项目的技术选型.md)
   * [数据绑定](框架部分/数据绑定.md)
