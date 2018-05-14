@@ -234,6 +234,10 @@ stop
 
 ## 结语
 
+这是整个preact的处理逻辑
+
+![imgs](https://www.peterchen.club/imgs/v-dom1.png)
+
 写完整个v-dom的构造，感觉对框架的理解，又更加深入了些，之后也会对v-dom操作的精华diff算法进行一个详细的分析，今天就到这了，RNG打KZ，看香锅发挥了
 
 ## 参考文章
