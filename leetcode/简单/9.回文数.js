@@ -29,7 +29,7 @@
  * @param {number} x
  * @return {boolean}
  */
-const isPalindrome = function (x) {
+const isPalindrome = function(x) {
   let numArr = x.toString().split('')
   let numArrLength = numArr.length
 
