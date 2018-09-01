@@ -14,3 +14,5 @@ function jumpFloor(number)
     }
     return arr[number + 1]
 }
+
+console.log(jumpFloor(2))
