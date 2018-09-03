@@ -20,6 +20,7 @@ function SubType() {
 }
 //继承了SuperType
 SubType.prototype = new SuperType();
+SubType.prototype.constructor = SubType
 
 var instance = new SubType();
 console.log(instance.getSuperValue());//false
@@ -109,7 +110,7 @@ SuperType.prototype.getColors = function() {
   return this.colors
 }
 function SubType(name, age) {
-  SuperType.call(this， name);
+  SuperType.call(this, name);
   this.age = age
 }
 SubType.prototype = Object.create(SuperType.prototype)// 不必调用超类构造函数，只需要副本即可
