@@ -1,6 +1,7 @@
 # JS原型链
 
 ![imgs](https://www.peterchen.club/imgs/prototype.png)
+![imgs](https://www.peterchen.club/imgs/prototype2.png)
 
 ## 定义
 
