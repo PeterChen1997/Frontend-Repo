@@ -1,5 +1,7 @@
 # JS原型链
 
+![imgs](https://www.peterchen.club/imgs/prototype.png)
+
 ## 定义
 
 JS只有一种结构，对象。每个对象都有一个私有属性__proto__，它指向它的原型对象的prototype。该 prototype 对象又具有一个自己的__proto__ ，层层向上直到一个对象的原型为 null。根据定义，null 没有原型，并作为这个原型链中的最后一个环节。
