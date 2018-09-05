@@ -1,0 +1,20 @@
+{
+  "name": "fightforoffer",
+  "version": "1.0.0",
+  "description": "前端知识合集",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "book sm && gitbook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeterChen1997/FightForOffer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PeterChen1997/FightForOffer/issues"
+  },
+  "homepage": "https://github.com/PeterChen1997/FightForOffer#readme"
+}
