@@ -5,7 +5,7 @@
   "main": "test.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "book sm && gitbook build"
+    "build": "rm -rf ./_book && book sm && gitbook build"
   },
   "repository": {
     "type": "git",

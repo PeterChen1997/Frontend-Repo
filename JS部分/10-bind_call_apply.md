@@ -42,6 +42,19 @@ call()方法调用函数，其具有指定的this和 **分别提供的** 参数
 
 > fun.call(thisArg, arg1, arg2...)
 
+实现方法
+
+```js
+Function.prototype.call2 = function(context, ...args) {
+    context = context || window;
+    let fn = Symbol()
+    context[fn] = this;
+    var result =  context[fn](...args)
+    Reflect.deleteProperty(context, fn)
+    return result;
+}
+```
+
 ## apply
 
 apply()方法接收的是 **一个包含多个参数的** 数组

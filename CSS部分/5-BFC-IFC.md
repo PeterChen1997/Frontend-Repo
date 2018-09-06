@@ -6,15 +6,10 @@
 
 ## 如何创建BFC
 
-- 根元素或其它包含它的元素
-- 浮动元素 (元素的 float 不是 none)
-- 绝对定位元素 (元素的 position 为 absolute 或 fixed)
-- 内联块元素 (元素具有 display: inline-block)
-- 表格单元格 (元素具有 display: table-cell，HTML表格单元格默认属性)
-- 表格标题 (元素具有 display: table-caption, HTML表格标题默认属性)
-- overflow 值不为 visible 的块元素(hidden、auto、scroll)
-- 弹性元素 (display: flex 或 inline-flex元素的子元素)
-- 网格元素 (display: grid 或 inline-grid 元素的子元素)
+- float 的值不为 none。
+- overflow 的值不为 visible。
+- position 的值不为 relative 和 static。
+- display 的值为 table-cell, table-caption, inline-block中的任何一个。
 
 ## BFC的特性
 
