@@ -69,6 +69,7 @@
   * [阿里村淘一面-2](前端面试经历/阿里村淘一面-2.md)
   * [阿里村淘一面](前端面试经历/阿里村淘一面.md)
   * [阿里评测题目](前端面试经历/阿里评测题目.md)
+  * [阿里秋招笔试](前端面试经历/阿里秋招笔试.md)
   * [阿里CBU一面](前端面试经历/阿里CBU一面.md)
   * [爱奇艺一面](前端面试经历/爱奇艺一面.md)
   * [今日头条](前端面试经历/今日头条.md)
@@ -121,6 +122,12 @@
     * [知识点](JS部分/12-canvas/知识点.md)
   - 2-跨域总结
     * [Note](JS部分/2-跨域总结/note.md)
+  - Indexed DB
+    * [indexedDB介绍](JS部分/indexedDB/indexedDB介绍.md)
+  - PWA
+    * [pwa介绍](JS部分/PWA/pwa介绍.md)
+  - Service Worker
+    * [service-worker介绍](JS部分/service-worker/service-worker介绍.md)
   * [13 Ajax](JS部分/*13-Ajax.md)
   * [*15-JS对象原生方法](JS部分/*15-JS对象原生方法.md)
   * [10 Bind Call Apply](JS部分/10-bind_call_apply.md)
@@ -175,6 +182,7 @@
   * [性格](mine/性格.md)
   * [优点与缺点](mine/优点与缺点.md)
   * [职业规划](mine/职业规划.md)
+  * [自我介绍](mine/自我介绍.md)
 - node部分
   * [express中间件原理](node部分/express中间件原理.md)
 * [Test](test.md)
