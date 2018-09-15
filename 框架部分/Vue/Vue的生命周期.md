@@ -1,5 +1,7 @@
 # Vue的声明周期
 
+[lifecycle](https://www.peterchen.club/imgs/lifecycle.png)
+
 ## 创建前后
 
 ### beforeCreate

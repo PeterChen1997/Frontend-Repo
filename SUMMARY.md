@@ -33,6 +33,7 @@
     * [Vue的生命周期](框架部分/Vue/Vue的生命周期.md)
     * [Vue相对原生JS的优点](框架部分/Vue/Vue相对原生JS的优点.md)
     * [Vue中的数据劫持](框架部分/Vue/Vue中的数据劫持.md)
+    * [Vue组件渲染原理](框架部分/Vue/Vue组件渲染原理.md)
     * [Vuex包括什么](框架部分/Vue/Vuex包括什么.md)
   * [技术选型](框架部分/技术选型.md)
   * [框架小知识点](框架部分/框架小知识点.md)
@@ -185,4 +186,5 @@
   * [自我介绍](mine/自我介绍.md)
 - node部分
   * [express中间件原理](node部分/express中间件原理.md)
+  * [V8中的垃圾回收](node部分/V8中的垃圾回收.md)
 * [Test](test.md)
