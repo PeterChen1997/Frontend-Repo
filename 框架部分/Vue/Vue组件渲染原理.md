@@ -65,7 +65,7 @@ createElement(
 ### 深入data对象
 
 ```js
-    // 和`v-bind:class`一样的 API
+  // 和`v-bind:class`一样的 API
   // 接收一个字符串、对象或字符串和对象组成的数组
   'class': {
     foo: true,
