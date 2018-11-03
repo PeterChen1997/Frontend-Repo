@@ -3,6 +3,8 @@
 ![imgs](https://www.peterchen.club/imgs/prototype.png)
 ![imgs](https://www.peterchen.club/imgs/prototype2.png)
 
+来源于一种设计模式——原型模式，这是JS的核心设计模式，通过原型的链式链接，极大程度的降低了代码的冗余度，连接了JS各种类型与方法
+
 ## 定义
 
 JS只有一种结构，对象。每个对象都有一个私有属性__proto__，它指向它的原型对象的prototype。该 prototype 对象又具有一个自己的__proto__ ，层层向上直到一个对象的原型为 null。根据定义，null 没有原型，并作为这个原型链中的最后一个环节。
