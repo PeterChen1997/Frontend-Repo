@@ -28,8 +28,8 @@
 arr[i] 中只含有小写英文字母
  */
 
-// 思路： 
-// 用数组排列组合所有情况，然后选最大值
+// 初次思路： 用数组排列组合所有情况，然后选最大值
+// 较优思路： 用递归dfs来构造答案，可以节省空间复杂度
 // 时间复杂度：o(2^n)
 // 空间复杂度：o(n)
 
@@ -37,11 +37,13 @@ arr[i] 中只含有小写英文字母
  * @param {string[]} arr
  * @return {number}
  */
+
+// answer 1
 function isUnique(str) {
     return str.length === new Set(str.split('')).size
 }
 
-const maxLength = (arr) => {
+const maxLength1 = (arr) => {
     if (!arr || !arr.length) {
         return 0
     }
@@ -69,4 +71,48 @@ const maxLength = (arr) => {
     return dpArr.reduce((maxVal, str) => Math.max(maxVal, str.length), 0)
 };
 
-console.log(maxLength(["yy","bkhwmpbiisbldzknpm"]))
+// answer 2
+function countOneInBinary(binaryNumber) {
+    let counter = 0
+    for (let i = 0; i < 32; i++) {
+        if ((1 << i) & binaryNumber) {
+            counter++
+        }
+    }
+    return counter
+}
+const maxLength = (arr) => {
+    let ans = 0
+
+    if (!arr || !arr.length) {
+        return ans
+    }
+
+    // 数组转二进制 + 校验（去除自身重复元素）
+    let filterArr = []
+    for (let i = 0; i < arr.length; i++) {
+        let item = arr[i]
+        let binaryItem = 0
+        for (let i = 0; i < item.length; i++) {
+            binaryItem += 1 << item[i].codePointAt(0) - 'a'.codePointAt(0)
+        }
+        if (countOneInBinary(binaryItem) === item.length) {
+            filterArr.push(binaryItem)
+        }
+    }
+
+    function dfs(index, binaryMask) {
+        ans = Math.max(ans, countOneInBinary(binaryMask))
+        for (let i = index; i < filterArr.length; i++) {
+            if ((filterArr[i] & binaryMask) === 0) {
+                dfs(i + 1, filterArr[i] | binaryMask)
+            }
+        }
+    }
+
+    dfs(0, 0)
+
+    return ans
+}
+
+console.log(maxLength(["un","iq","ue"]))
