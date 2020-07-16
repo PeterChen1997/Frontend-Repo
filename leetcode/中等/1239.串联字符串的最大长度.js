@@ -29,8 +29,7 @@ arr[i] 中只含有小写英文字母
  */
 
 // 思路： 
-// 使用 32 位 int 来表示二进制的 26个 英文字母用于判断是否重复
-// 使用Depth First Search进行搜索
+// 用数组排列组合所有情况，然后选最大值
 // 时间复杂度：o(2^n)
 // 空间复杂度：o(n)
 
@@ -38,61 +37,36 @@ arr[i] 中只含有小写英文字母
  * @param {string[]} arr
  * @return {number}
  */
-function isUnique() {
-
+function isUnique(str) {
+    return str.length === new Set(str.split('')).size
 }
 
 const maxLength = (arr) => {
-    let resArr = []
-
-    // 注意，这里要过滤掉自身重复的情况
-    arr = arr.filter(item => item.length === new Set(item.split('')).size)
-    
-    // 遍历每一项的每一个字母
-    for (let i = 0; i < arr.length; i++) {
-        let item = arr[i]
-        for (let j = 0; j < item.length; j++) {
-
-        }
+    if (!arr || !arr.length) {
+        return 0
     }
 
-
+    let dpArr = ['']
+    // 注意，这里要过滤掉自身重复的情况
+    arr = arr.filter(item => isUnique(item))
+    
+    // 遍历每一项
+    for (let i = 0; i < arr.length; i++) {
+        const item = arr[i]
+        // 遍历dp数组
+        for (let j = 0; j < dpArr.length; j++) {
+            const dpItem = dpArr[j]
+            if (item === dpItem) {
+                continue
+            }
+            const resStr = dpItem + item
+            if (isUnique(resStr)) {
+                dpArr.push(resStr)
+            }
+        }
+    }
     // 取出最大值
-    return resArr.reduce()
+    return dpArr.reduce((maxVal, str) => Math.max(maxVal, str.length), 0)
 };
 
-console.log(maxLength(["un","iq","ue"]))
-
-
-// class Solution:
-//     def maxLength(self, arr: List[str]) -> int:
-//         arr = [x for x in arr if len(x) == len(set(x))]
-        
-//         def codec(str):
-//             res = 0
-//             for c in str:
-//                 res = res|(1<<(ord(c)-ord('a')))
-//             return (res,len(str))
-        
-//         dp = [(0,0)]
-//         for x in arr:
-//             mask,l = codec(x)
-//             for m,c in dp:
-//                 if not mask&m:
-//                     dp.append((mask|m,l+c))
-        
-//         return max(l for m,l in dp)
-            
-// class Solution:
-// def maxLength(self, arr: List[str]) -> int:
-//     res = [[]]
-    
-//     for e in arr:
-//         if len(set(list(e))) < len(e): #自身有重复
-//             continue
-//         lens = len(res)
-//         for i in range(lens):
-
-//             if not set(list(''.join(res[i])))&set(list(e)): #添加且与之前的不重复
-//                 res.append(res[i] + [e])
-//     return max([len(''.join(i)) for i in res]) #选出最长
+console.log(maxLength(["yy","bkhwmpbiisbldzknpm"]))
