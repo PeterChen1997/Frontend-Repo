@@ -27,7 +27,7 @@ const find_string_anagrams = function(str, pattern) {
     let windowStart = 0
     let windowEnd = 0
 
-    const patternTable = []
+    const patternTable = {}
     const resultIndex = []
     let matched = 0
 
