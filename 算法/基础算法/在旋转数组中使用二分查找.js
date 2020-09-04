@@ -42,10 +42,10 @@ let binarySearchRotated = function (arr, key) {
 };
 
 
-let v1 = [6, 7, 1, 2, 3, 4, 5];  
+let v1 = [6, 7, 1, 2, 3, 4, 5];
 console.log("Key(3) found at: " + binarySearchRotated(v1, 3));
 console.log("Key(6) found at: " + binarySearchRotated(v1, 6));
-    
+
 let v2 = [4, 5, 6, 1, 2, 3];
 console.log("Key(3) found at: " + binarySearchRotated(v2, 3));
 console.log("Key(6) found at: " + binarySearchRotated(v2, 6));  
