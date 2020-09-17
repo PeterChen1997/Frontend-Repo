@@ -76,6 +76,8 @@ function solveKnapsack2(profits, weights, capacity) {
 }
 
 // 方法三：自下而上的DP
+// time: N * C
+// space: N * C
 // dp[i][c] = Math.max(dp[i - 1][c], profit[i] + dp[i - 1][c - weight[i]])
 function solveKnapsack3(profits, weights, capacity) {
     if (capacity <= 0 || profits.length < 0 || profits.length !== weights.length) {
@@ -84,8 +86,8 @@ function solveKnapsack3(profits, weights, capacity) {
 
     const len = profits.length
     const dp = new Array(len)
-        .fill(0)
-        .map(_ => new Array(capacity).fill(0))
+      .fill(0)
+      .map((_) => new Array(capacity + 1).fill(0));
 
     // init empty capacity value
     for (let i = 0; i < len; i++) {
@@ -120,9 +122,55 @@ function solveKnapsack3(profits, weights, capacity) {
 }
 
 // 方法三（优化）：自下而上DP，空间复杂度优化
+// time: N * C
+// space: 2 * C
+// we only need one previous row
+function solveKnapsack4(profits, weights, capacity) {
+  if (
+    capacity <= 0 ||
+    profits.length < 0 ||
+    profits.length !== weights.length
+  ) {
+    return 0;
+  }
+
+  const len = profits.length;
+
+  // init dp array
+  const dp = new Array(2)
+    .fill(0)
+    .map((item) => new Array(capacity + 1).fill(0));
+
+  // init first line
+  for (let c = 0; c <= capacity; c++) {
+    if (c >= weights[0]) {
+      dp[0][c] = dp[1][c] = profits[0];
+    }
+  }
+
+  // process all sub-array
+  for (let i = 1; i < len; i++) {
+    for (let c = 1; c <= capacity; c++) {
+      let profitOne = 0;
+      if (c >= weights[i]) {
+        profitOne = profits[i] + dp[(i - 1) % 2][c - weights[i]];
+      }
+
+      let profitTwo = dp[(i - 1) % 2][c];
+
+      dp[i % 2][c] = Math.max(profitOne, profitTwo);
+    }
+  }
+
+  return dp[(len - 1) % 2][capacity];
+}
 
 
 var profits = [1, 6, 10, 16];
 var weights = [1, 2, 3, 5];
-console.log(`Total knapsack profit: ---> ${solveKnapsack3(profits, weights, 7)}`);
-console.log(`Total knapsack profit: ---> ${solveKnapsack3(profits, weights, 6)}`);
+console.log(
+  `Total knapsack profit: ---> ${solveKnapsack4(profits, weights, 7)}`
+);
+console.log(
+  `Total knapsack profit: ---> ${solveKnapsack4(profits, weights, 6)}`
+);
