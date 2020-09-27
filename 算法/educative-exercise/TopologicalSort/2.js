@@ -22,34 +22,49 @@ Output:[1]
  */
 
 const find_trees = function (nodes, edges) {
-    // TODO: Write your code here
-    return [];
-};
+    if (nodes <= 0 || !edges || !edges.length) {
+        return []
+    }
 
-console.log(
-    `Roots of MHTs: ${find_trees(5, [
-        [0, 1],
-        [1, 2],
-        [1, 3],
-        [2, 4],
-    ])}`
-);
-console.log(
-    `Roots of MHTs: ${find_trees(4, [
-        [0, 1],
-        [0, 2],
-        [2, 3],
-    ])}`
-);
-console.log(
-    `Roots of MHTs: ${find_trees(4, [
-        [1, 2],
-        [1, 3],
-    ])}`
-);
-const find_trees = function (nodes, edges) {
-    // TODO: Write your code here
-    return [];
+    // init graph
+    const inDegree = new Array(nodes).fill(0)
+    const graph = new Array(nodes).fill(0).map(_ => new Array())
+
+    // build graph
+    edges.forEach(([nodeOne, nodeTwo]) => {
+        graph[nodeOne].push(nodeTwo);
+        graph[nodeTwo].push(nodeOne);
+
+        inDegree[nodeTwo]++;
+        inDegree[nodeOne]++;
+    })
+
+    // find leaves
+    const leaves = []
+    for (let i = 0; i < inDegree.length; i++) {
+        if (inDegree[i] === 1) {
+            leaves.push(i)
+        }
+    }
+
+    // loop for two nodes
+    let totalNodesCount = nodes
+    while (totalNodesCount > 2) {
+        leavesSize = leaves.length
+        totalNodesCount -= leavesSize
+        for (let i = 0; i < leavesSize; i++) {
+            const vertex = leaves.shift()
+            
+            graph[vertex].forEach(child => {
+                inDegree[child]--
+                if (inDegree[child] === 1) {
+                    leaves.push(child)
+                }
+            })
+        }
+    }
+
+    return leaves;
 };
 
 console.log(
