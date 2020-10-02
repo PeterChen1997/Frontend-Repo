@@ -1,6 +1,7 @@
 {
   "name": "fightforoffer",
   "version": "1.0.0",
+  "type": "module",
   "description": "前端知识合集",
   "main": "test.js",
   "scripts": {
