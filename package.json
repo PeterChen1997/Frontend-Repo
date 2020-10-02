@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/PeterChen1997/FightForOffer/issues"
   },
-  "homepage": "https://github.com/PeterChen1997/FightForOffer#readme"
+  "homepage": "https://github.com/PeterChen1997/FightForOffer#readme",
+  "devDependencies": {
+    "@hediet/debug-visualizer-data-extraction": "^0.12.0"
+  }
 }
