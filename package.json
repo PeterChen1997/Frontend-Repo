@@ -1,0 +1,24 @@
+{
+  "name": "software-develop-engineer-repo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "@vuepress/plugin-google-analytics": "^1.6.0",
+    "vuepress": "^1.6.0",
+    "vuepress-bar": "^0.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeterChen1997/FightForOffer.git"
+  },
+  "author": "chenyang.peter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PeterChen1997/FightForOffer/issues"
+  },
+  "homepage": "https://github.com/PeterChen1997/FightForOffer#readme",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}
