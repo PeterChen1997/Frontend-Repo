@@ -12,7 +12,10 @@
     "type": "git",
     "url": "git+https://github.com/PeterChen1997/FightForOffer.git"
   },
-  "author": "chenyang.peter",
+  "author": {
+    "name": "chenyang.peter",
+    "email": "13093023233@163.com"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/PeterChen1997/FightForOffer/issues"

@@ -12,25 +12,26 @@ module.exports = {
     description: "Stay hungry, stay foolish",
     plugins: [
         [
+            "gitalk-maker",
+            {
+                gitalkConfig: {
+                    clientID: "c16d424e292195ea5d29",
+                    clientSecret: "e37a52f52ed6ae94a03c98b3f5fb040691a8926e",
+                    repo: "frontend-repo",
+                    owner: "PeterChen1997",
+                    admin: ["PeterChen1997"],
+                    distractionFreeMode: false, // Facebook-like distraction free mode
+                },
+            },
+        ],
+        [
             "@vuepress/google-analytics",
             {
                 ga: "UA-179511910-1",
             },
         ],
         "@vuepress/medium-zoom",
-        [
-            "gitalk",
-            {
-                gitalkConfig: {
-                    clientID: "c16d424e292195ea5d29",
-                    clientSecret: "e37a52f52ed6ae94a03c98b3f5fb040691a8926e",
-                    repo: "peterchen1997/Frontend-Repo",
-                    owner: "peterchen1997",
-                    admin: ["peterchen1997"],
-                    distractionFreeMode: false, // Facebook-like distraction free mode
-                },
-            },
-        ],
+        "@vuepress/plugin-back-to-top",
     ],
     themeConfig: {
         nav: [

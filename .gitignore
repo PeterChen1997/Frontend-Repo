@@ -1,2 +1,13 @@
 dist
 node_modules
+
+test.*
+method.md
+
+/mine
+
+tempCodeRunnerFile.*
+
+mine.*
+
+.DS_store
