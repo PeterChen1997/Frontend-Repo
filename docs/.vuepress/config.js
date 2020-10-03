@@ -17,6 +17,20 @@ module.exports = {
                 ga: "UA-179511910-1",
             },
         ],
+        "@vuepress/medium-zoom",
+        [
+            "gitalk",
+            {
+                gitalkConfig: {
+                    clientID: "c16d424e292195ea5d29",
+                    clientSecret: "e37a52f52ed6ae94a03c98b3f5fb040691a8926e",
+                    repo: "peterchen1997/Frontend-Repo",
+                    owner: "peterchen1997",
+                    admin: ["peterchen1997"],
+                    distractionFreeMode: false, // Facebook-like distraction free mode
+                },
+            },
+        ],
     ],
     themeConfig: {
         nav: [
@@ -29,6 +43,7 @@ module.exports = {
         docsBranch: "v2",
         editLinks: true,
         editLinkText: "帮助我们改善此页面",
+        smoothScroll: true,
     },
     markdown: {
         // 显示代码行号
