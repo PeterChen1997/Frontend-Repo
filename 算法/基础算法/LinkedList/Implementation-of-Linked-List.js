@@ -1,13 +1,27 @@
-class LinkListNode {
+export class LinkedListNode {
     constructor(data) {
         this.data = data;
         this.next = null;
     }
 }
 
+export function getLinkedListLen(head) {
+    if (!head) {
+        return 0;
+    }
+
+    let counter = 0;
+    while (head) {
+        head = head.next;
+        counter++;
+    }
+
+    return counter;
+}
+
 class LinkedList {
     static insertAtHead(head, data) {
-        let newNode = new LinkListNode(data);
+        let newNode = new LinkedListNode(data);
         newNode.next = head;
         return newNode;
     }
