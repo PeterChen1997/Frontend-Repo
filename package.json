@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.6.0",
     "@vuepress/plugin-google-analytics": "^1.6.0",
     "@vuepress/plugin-medium-zoom": "^1.6.0",
     "vuepress": "^1.6.0",
@@ -25,8 +26,5 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
-  "dependencies": {
-    "gitalk": "^1.6.2",
-    "vuepress-plugin-gitalk-maker": "^0.1.0"
-  }
+  "dependencies": {}
 }

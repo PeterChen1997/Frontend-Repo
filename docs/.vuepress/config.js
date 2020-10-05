@@ -12,19 +12,6 @@ module.exports = {
     description: "Stay hungry, stay foolish",
     plugins: [
         [
-            "gitalk-maker",
-            {
-                gitalkConfig: {
-                    clientID: "c16d424e292195ea5d29",
-                    clientSecret: "e37a52f52ed6ae94a03c98b3f5fb040691a8926e",
-                    repo: "frontend-repo",
-                    owner: "PeterChen1997",
-                    admin: ["PeterChen1997"],
-                    distractionFreeMode: false, // Facebook-like distraction free mode
-                },
-            },
-        ],
-        [
             "@vuepress/google-analytics",
             {
                 ga: "UA-179511910-1",
@@ -32,18 +19,24 @@ module.exports = {
         ],
         "@vuepress/medium-zoom",
         "@vuepress/plugin-back-to-top",
+
+        // wait for the chance
+        // [
+        //     "algolia",
+        //     {
+        //         apiKey: "<API_KEY>",
+        //         indexName: "<INDEX_NAME>",
+        //     },
+        // ]
     ],
     themeConfig: {
-        nav: [
-            ...nav,
-            // { text: 'Blog', link: 'https://www.wenboz.com' },
-        ],
+        nav: [...nav],
         sidebar,
         lastUpdated: "Last Updated",
         repo: "peterchen1997/Frontend-Repo",
         docsBranch: "v2",
         editLinks: true,
-        editLinkText: "帮助我们改善此页面",
+        editLinkText: "说的不对，点这里帮忙Fix～",
         smoothScroll: true,
     },
     markdown: {
