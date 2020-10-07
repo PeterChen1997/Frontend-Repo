@@ -37,9 +37,15 @@ ES6主要有三大块改进：
 - reflect
 - promise
 
-## 特殊语法
+## 特殊点
 
-### rest和spread
+### let 和 var 的区别
+
+- let 为块级作用域，var 为函数作用域
+- let 没有变量提升，有暂时性死区的问题
+- let 不能重复声明
+
+### rest 和 spread
 
 ```js
 // rest

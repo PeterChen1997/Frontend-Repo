@@ -24,7 +24,7 @@
   "homepage": "https://github.com/PeterChen1997/FightForOffer#readme",
   "scripts": {
     "hooks:init": "ln -s git-hook/* .git/hooks/",
-    "docs:dev": "vuepress dev docs",
+    "dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
   "dependencies": {}
