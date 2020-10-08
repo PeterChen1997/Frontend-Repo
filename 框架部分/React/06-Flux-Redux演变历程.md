@@ -3,6 +3,7 @@
 <!-- TOC -->
 
 - [Flux-Redux演变历程](#flux-redux演变历程)
+  - [解决的问题](#解决的问题)
   - [Flux](#flux)
     - [优点](#优点)
     - [缺点](#缺点)
@@ -15,8 +16,6 @@
 如何更好地管理整个应用共享的数据，解决了组件层级过深时层层传递数据的尴尬局面
 
 ## Flux
-
-![imgs](https://www.peterchen.club/imgs/flux.png)
 
 ### 优点
 
