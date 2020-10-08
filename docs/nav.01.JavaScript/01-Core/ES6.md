@@ -28,7 +28,7 @@ ES6主要有三大块改进：
 - 函数扩展
   - rest
 - 数组扩展
-  - Array.from() / fill() / inclueds()
+  - Array.from() / fill() / includes()
 - 对象扩展
   - ES2020 链式调用判断 ?.
   - ES2020 null判断符号 ??

@@ -21,4 +21,3 @@
 - action 可以进行异步操作
 - mutation 必须是同步操作
 - action支持载荷方式触发mutation
-- 

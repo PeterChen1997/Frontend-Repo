@@ -39,6 +39,9 @@ function integrateGitalk(router) {
                     renderGitalk();
                 }
             }
+
+            console.log(commentsContainer);
+            commentsContainer.style.margin = "38px";
         }
     }
     function renderGitalk() {
