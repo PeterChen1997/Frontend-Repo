@@ -1,8 +1,7 @@
-# FightForOffer
+# Frontend-Repo
 
-前端知识合集
-
+前端小记：https://peterchen1997.github.io/Frontend-Repo/
 
 ## 加入贡献
 
-### 命名规范
+提供issues即可
