@@ -102,7 +102,7 @@ export let displayInorder = function (node) {
     console.log(node.data + ", ");
     displayInorder(node.right);
 };
-let createBST = function (arr) {
+export let createBST = function (arr) {
     let root = null;
     for (let x in arr) {
         root = insert(root, arr[x]);
