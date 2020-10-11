@@ -12,17 +12,18 @@ import * as Tree from "./Implementation-of-BinaryTree.js";
      const result = []
 
      // L M R
-     while (root) {
-         stack.push(root)
-         root = root.left
-     }
+     while (stack.length > 0 || root) {
+        if (root) {
+            stack.push(root);
+            root = root.left;
+            continue
+        }
 
-     while (stack.length > 0) {
         let temp = stack.pop()
         result.push(temp.data)
         
         if (temp.right) {
-            result.push(temp.right.data)
+            root = temp.right
         }
     }
 
