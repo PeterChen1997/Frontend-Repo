@@ -3,7 +3,7 @@
  */
 
 import LinkedList, {
-    getLinkedListLen,
+    getLinkedListLen
 } from "./Implementation-of-Linked-List.js";
 
 let splitKNode = function (head, k, offset) {
