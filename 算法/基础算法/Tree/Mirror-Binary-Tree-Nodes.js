@@ -19,7 +19,7 @@ let mirrorTree = function (root) {
     if (root.right) {
         mirrorTree(root.right)
     }
-
+g
     // current
     let temp = root.left
     root.left = root.right
